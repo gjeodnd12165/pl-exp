@@ -29,7 +29,7 @@ pipeline {
     stages {
         stage('git scm update') {
             steps {
-                sh "git clone https://github.com/gjeodnd12165/pl-exp.git ."
+                checkout scm
             }
         }
         stage('docker build && push') {
